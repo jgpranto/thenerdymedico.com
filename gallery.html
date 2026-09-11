@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#09080a">
+  <title>gallery — the nerdy medico</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="gallery-page">
+  <div class="noise" aria-hidden="true"></div>
+  <header class="site-nav gallery-nav">
+    <a class="brand" href="index.html">the nerdy medico</a>
+    <span class="gallery-label">visual journal / 2026</span>
+    <a href="index.html" class="nav-pill">← home</a>
+  </header>
+
+  <main>
+    <section class="gallery-hero">
+      <div class="gallery-intro">
+        <p class="eyebrow">gallery</p>
+        <h1>life<br><em>in frames.</em></h1>
+        <p>Professional moments, ordinary moments, and everything in between.</p>
+      </div>
+      <div class="orbit-wrap">
+        <div class="orbit">
+          <button class="orbit-thumb t1 active" data-index="0" aria-label="Show gallery image 1"><img src="assets/life-01.jpg" alt=""></button>
+          <button class="orbit-thumb t2" data-index="1" aria-label="Show gallery image 2"><img src="assets/life-02.jpg" alt=""></button>
+          <button class="orbit-thumb t3" data-index="2" aria-label="Show gallery image 3"><img src="assets/life-03.jpg" alt=""></button>
+          <button class="orbit-thumb t4" data-index="3" aria-label="Show gallery image 4"><img src="assets/life-04.jpg" alt=""></button>
+          <div class="orbit-center">
+            <div class="orbit-main"><img id="orbitMain" src="assets/life-01.jpg" alt="Nahid Hasan outdoors"></div>
+            <div class="orbit-caption"><span id="orbitIndex">01</span><strong id="orbitTitle">the person behind the page</strong></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="gallery-grid">
+      <figure class="gallery-card wide"><img src="assets/bio-03.jpg" alt="Nahid Hasan teaching"><figcaption><span>01</span> journal club / medicine</figcaption></figure>
+      <figure class="gallery-card"><img src="assets/life-03.jpg" alt="Nahid Hasan in Michigan"><figcaption><span>02</span> michigan / a day out</figcaption></figure>
+      <figure class="gallery-card"><img src="assets/bio-02.jpg" alt="Nahid Hasan seated"><figcaption><span>03</span> between the pages</figcaption></figure>
+      <figure class="gallery-card"><img src="assets/life-02.jpg" alt="Nahid Hasan by the water"><figcaption><span>04</span> waterfront / quiet hour</figcaption></figure>
+      <figure class="gallery-card"><img src="assets/bio-04.jpg" alt="Nahid Hasan presenting"><figcaption><span>05</span> presentation / work</figcaption></figure>
+      <figure class="gallery-card"><img src="assets/life-04.jpg" alt="Nahid Hasan outdoors"><figcaption><span>06</span> off-duty / on the move</figcaption></figure>
+    </section>
+  </main>
+
+  <footer class="gallery-footer"><span>the nerdy medico</span><a href="https://www.youtube.com/@thenerdymedico" target="_blank" rel="noopener">youtube ↗</a><a href="https://www.instagram.com/the_nerdy_medico_/" target="_blank" rel="noopener">instagram ↗</a><a href="https://www.facebook.com/thenerdymedico" target="_blank" rel="noopener">facebook ↗</a></footer>
+
+  <div class="cursor-dot"></div><div class="cursor-ring"></div>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="supabase-config.js"></script>
+  <script src="content-sync.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

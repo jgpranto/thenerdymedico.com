@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#09080a">
+  <title>admin — the nerdy medico</title>
+  <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+  <main class="shell">
+    <section id="loginView" class="card login-card">
+      <div class="eyebrow">private / admin</div>
+      <h1>the nerdy <em>medico.</em></h1>
+      <p class="muted">Sign in to manage the public bio, social links, and gallery.</p>
+      <form id="loginForm" class="stack">
+        <label>Email<input id="email" type="email" autocomplete="username" required></label>
+        <label>Password<input id="password" type="password" autocomplete="current-password" required></label>
+        <button class="primary" type="submit">sign in <span>↗</span></button>
+        <p id="loginMessage" class="message" role="alert"></p>
+      </form>
+    </section>
+
+    <section id="appView" class="hidden">
+      <header class="topbar">
+        <div><div class="eyebrow">private / admin</div><h1>the nerdy medico</h1></div>
+        <div class="top-actions"><a href="index.html" target="_blank" rel="noopener">view site ↗</a><button id="logoutBtn" class="ghost">log out</button></div>
+      </header>
+
+      <div class="grid">
+        <section class="card">
+          <div class="section-head"><div><div class="eyebrow">01 / profile</div><h2>Bio &amp; socials</h2></div><button id="saveProfileBtn" class="primary small">save changes</button></div>
+          <form id="profileForm" class="stack">
+            <label>Bio<textarea id="bio" rows="11" placeholder="Your bio…"></textarea></label>
+            <div class="two-col">
+              <label>YouTube URL<input id="youtubeUrl" type="url" placeholder="https://youtube.com/@…"></label>
+              <label>Instagram URL<input id="instagramUrl" type="url" placeholder="https://instagram.com/…"></label>
+            </div>
+            <label>Facebook URL<input id="facebookUrl" type="url" placeholder="https://facebook.com/…"></label>
+            <p id="profileMessage" class="message" role="status"></p>
+          </form>
+        </section>
+
+        <section class="card">
+          <div class="section-head"><div><div class="eyebrow">02 / gallery</div><h2>Manage moments</h2></div></div>
+          <div class="upload-row">
+            <label class="upload">+ add photos<input id="fileInput" type="file" accept="image/jpeg,image/png,image/webp,image/gif" multiple></label>
+            <span class="muted">Drag rows to reorder. Captions are optional.</span>
+          </div>
+          <p id="galleryMessage" class="message" role="status"></p>
+          <div id="galleryList" class="gallery-list" aria-live="polite"></div>
+        </section>
+      </div>
+    </section>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="supabase-config.js"></script>
+  <script src="admin.js"></script>
+</body>
+</html>
